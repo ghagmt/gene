@@ -1,0 +1,574 @@
+@font-face {
+	src: url('fonts/Schnyder Cond M Light.ttf');
+	font-family: Schnyder;
+}
+
+@font-face {
+	src: url('fonts/OpenSans-SemiBold.ttf');
+	font-family: OpenSans;
+}
+
+@font-face {
+	src: url('fonts/OpenSans-Regular.ttf');
+	font-family: OpenSans-Regular;
+}
+
+html {
+	font-family: OpenSans;
+}
+
+a {
+	color: black;
+}
+
+p {
+	line-height: 25px;
+}
+
+h2 {
+	letter-spacing: 1.5px;
+}
+
+button {
+	border: 0;
+}
+
+#top_hat {
+	width: calc(100% - 2.8vh);
+	height: 2.2vh;
+	padding: 1.4vh;
+	border-bottom: 0.2vh solid black;
+	text-align: center;
+	font-size: 12px;
+}
+
+#navigation {
+	width: 100%;
+	height: 10vh;
+	border-bottom: 0.2vh solid #e5e5e5;
+}
+
+#user_icon {
+	float: right;
+	position: relative;
+	width: 4vh;
+	height: 4vh;
+	margin: 3vh;
+	margin-right: 0;
+	background-image: url("images/user_icon.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+#cart_icon {
+	float: right;
+	position: relative;
+	width: 4vh;
+	height: 4vh;
+	margin: 3vh;
+	margin-right: 0;
+	background-image: url("images/cart_icon.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+#options_icon {
+	float: right;
+	position: relative;
+	width: 4vh;
+	height: 4vh;
+	margin: 3vh;
+	margin-right: 15vh;
+	background-image: url("images/options_icon.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+#logo {
+	float: left;
+	position: relative;
+	width: 15vh;
+	height: 100%;
+	background-image: url("images/logo.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-left: 5vh;
+}
+
+main {
+	float: left;
+	position: relative;
+	width: calc(64% - 8vw);
+	padding: 4vw;
+	padding-top: 2vw;
+}
+
+main h2 {
+	font-size: 25px;
+	font-weight: 600;
+	font-family: Schnyder;
+}
+
+main p {
+	padding-top: 2vh;
+}
+
+#tabs {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: 4vh;
+	background-color: grey;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: white;
+}
+
+.tab {
+	color: grey;
+}
+
+.tab:hover {
+	cursor: pointer;
+}
+
+#diagram {
+	width: 100%;
+}
+
+#config {
+	float: left;
+	position: relative;
+	background-color: #e4e3de;
+	width: calc(36% - 14vw);
+	height: calc(100vh - 6vw);
+	margin-top: -16vh;
+	padding: 7vw;
+	padding-top: 10vw; 
+}
+
+#config #product_name {
+	float: left;
+	position: relative;
+	font-size: 18px;
+	padding-bottom: 3vh;
+}
+
+#config #price {
+	float: right;
+	position: relative;
+	font-size: 18px;
+	padding-bottom: 3vh;
+}
+
+#config #rating {
+	float: left;
+	position: relative;
+	width: 100%;
+	font-size: 12px;
+}
+
+#config .stars {
+	float: left;
+	position: relative;
+}
+
+#config #rating a {
+	float: right;
+	position: relative;
+}
+
+#config #included_products {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: 5vh;
+	font-size: 12px;
+}
+
+#config #included_products li {
+	float: left;
+	position: relative;
+	width: calc(100% - 4vh);
+	padding: 2vh;
+}
+
+.check_sign {
+	float: right;
+	position: relative;
+	width: 4vh;
+	height: 4vh;
+	margin: -0.5vh;
+	background-image: url("images/check.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#config #trial_offer {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: 7vh;
+	font-style: italic;
+	font-weight: 600;
+	text-align: center;
+}
+
+#config button {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: 3vh;
+	padding: 2.5vh;
+	font-size: 15px;
+	font-family: OpenSans;
+}
+
+#config #subscribe {
+	background-color: #0a3fa6;
+	color: white;
+	transition: 0.4s;
+}
+
+#config #shop_products {
+	background-color: #e4e3de;
+	border: 0.2vh solid black;
+	color: black;
+	transition: 0.4s;
+}
+
+#config #subscribe:hover {
+	background-color: #0A3485;
+	transition: 0.4s;
+}
+
+#config #shop_products:hover {
+	background-color: #C9C9C7;
+	transition: 0.4s;
+}
+
+#config #help {
+	float: left;
+	position: relative;
+	width: calc(100% - 6vh);
+	padding: 3vh;
+	font-size: 12px;
+	text-align: center;
+}
+
+.section {
+	display: none;
+	float: left;
+	position: relative;
+	width: calc(64% - 8vw);
+	padding: 4vw;
+	padding-top: 0;
+}
+
+.section img {
+	width: calc(100% + 8vw);
+	margin-left: -4vw;
+	margin-right: -4vw;
+}
+
+.section h2 {
+	float: left;
+	position: relative;
+	width: calc(100% - 10vh);
+	margin-top: 5vh;
+	padding: 5vh;
+	padding-left: 0;
+	font-family: Schnyder;
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.included_product {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 30vh;
+	padding-bottom: 5vh;
+}
+
+.included_product img {
+	float: left;
+	position: relative;
+	width: auto;
+	height: 100%;
+	margin: 0;
+	margin-right: 3vh;
+}
+
+.included_product h3 {
+	float: left;
+	position: relative;
+	width: calc(100% - 34vh);
+}
+
+.included_product td {
+	padding-bottom: 3vh;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.included_product td tr td {
+	padding-bottom: 0;
+}
+
+.included_product td:nth-child(1) {
+	width: 55%;
+	padding-right: 3vh;
+}
+.included_product td:nth-child(2) {
+	padding-left: 3vh;
+	width: 35%;
+}
+.included_product td:nth-child(3) {
+	width: 10%;
+}
+
+#reviews_section h2 {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 3vh;
+}
+
+#reviews_section #average {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 20vh;
+}
+
+#reviews_section #average > div {
+	float: left;
+	position: relative;
+}
+
+#reviews_section .stars {
+	float: left;
+	position: relative;
+}
+
+#reviews_section #rating_stats {
+	float: right;
+	position: relative;
+	width: 50%;
+}
+
+#reviews_section #rating_stats td:first-child {
+	width: 25%;
+}
+#reviews_section #rating_stats td:nth-child(2) {
+	width: 10%;
+}
+
+.bar {
+	float: left;
+	position: relative;
+	height: 2vh;
+	background-color: black;
+}
+
+#reviews {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: 5vh;
+}
+
+.review {
+	float: left;
+	position: relative;
+	width: calc(50% - 10vh);
+	padding: 5vh;
+}
+
+.review .stars {
+	padding: 0;
+	margin: 0;
+}
+
+.review h4 {
+	float: left;
+	position: relative;
+	width: calc(100% - 2vh);
+	padding: 2vh;
+	padding-left: 0;
+	font-size: 16px;
+}
+
+.review p {
+	float: left;
+	position: relative;
+	width: 100%;
+	font-size: 12px;
+}
+
+.review .name {
+	float: left;
+	position: relative;
+	padding-top: 3vh;
+	font-size: 13px;
+}
+
+#faq_section li {
+	float: left;
+	position: relative;
+	width: calc(100% - 4vh);
+	padding: 2vh;
+	padding-left: 0;
+}
+
+#faq_section li h3 {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 2vh;
+	font-size: 16px;
+}
+
+#faq_section li h3 div {
+	float: left;
+	position: relative;
+	margin-top: -1.5vh;
+	margin-right: 1.5vh;
+	font-size: 34px;
+	font-family: OpenSans-Regular;
+}
+
+#faq_section li p {
+	padding: 5vh;
+	font-size: 12px;
+}
+
+#benefits_section>div {
+	float: left;
+	position: relative;
+	width: calc(50% - 4vh);
+	padding: 2vh;
+}
+
+#benefits_section h3 {
+	font-size: 16px;
+	margin-bottom: 4vh;
+}
+
+#benefits_section li {
+	height: 30px;
+	padding: 2vh;
+	padding-left: 0;
+	border-bottom: 0.2vh dashed grey;
+	font-size: 12px;
+}
+
+#benefits_section li:last-child {
+	border: 0;
+}
+
+#benefits_section b {
+
+}
+
+.section.active {
+	display: block;
+}
+
+.tab.active {
+	color: black;
+}
+
+#faq_section h3:hover {
+	cursor: pointer;
+}
+
+footer {
+	float: left;
+	position: relative;
+	width: calc(100% - 50vw);
+	padding: 15vh;
+	padding-right: 25vw;
+	padding-left: 25vw;
+	background-color: black;
+	color: white;
+}
+
+footer a {
+	color: #cecece;
+}
+
+#footer_links {
+	float: left;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+#footer_links a {
+	padding: 2.5vh;
+	text-decoration: none;
+	color: black;
+}
+
+footer h3 {
+	float: left;
+	position: relative;
+	width: calc(100% - 6vh);
+	padding: 3vh;
+	font-size: 3vh;
+	text-align: center;
+}
+
+footer input, footer button {
+	float: left;
+	position: relative;
+	margin: 0;
+	padding: 3vh;
+	border: 0.2vh solid white;
+	background-color: black;
+	font-size: 2.2vh;
+	color: white;
+}
+
+footer input {
+	width: calc(92% - 6.2vh);
+	border-right: 0;
+}
+
+footer button {
+	width: 8%;
+}
+
+::placeholder {
+	color: #cecece;
+}
+
+#social_links {
+	float: left;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 30%;
+	margin-top: 5vh;
+}
+
+#copyright {
+	float: right;
+	position: relative;
+	margin-top: 5vh;
+	color: #cecece;
+}
