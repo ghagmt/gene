@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$('#copyright span').text(new Date().getFullYear());
+
 	$(window).scroll(function () {
 		if(($(window).scrollTop()+$(window).height()) >= ($('footer').offset().top - $('#footer_links').height())) {
 			let through_footer = ($(window).scrollTop()+$(window).height()) - ($('footer').offset().top - $('#footer_links').height());
@@ -10,27 +12,10 @@ $(document).ready(function() {
 	});
 
 	$('.tab').on('click', function() {
-		if($(this).attr('id') == 'included_products_link') {
-			$('.tab').removeClass('active');
-			$(this).addClass('active');
-			$('.section').removeClass('active');
-			$('#included_products_section').addClass('active');
-		} else if($(this).attr('id') == 'reviews_link') {
-			$('.tab').removeClass('active');
-			$(this).addClass('active');
-			$('.section').removeClass('active');
-			$('#reviews_section').addClass('active');
-		} else if($(this).attr('id') == 'faq_link') {
-			$('.tab').removeClass('active');
-			$(this).addClass('active');
-			$('.section').removeClass('active');
-			$('#faq_section').addClass('active');
-		} else if($(this).attr('id') == 'benefits_link') {
-			$('.tab').removeClass('active');
-			$(this).addClass('active');
-			$('.section').removeClass('active');
-			$('#benefits_section').addClass('active');
-		}
+		$('.tab').removeClass('active');
+		$(this).addClass('active');
+		$('section').removeClass();
+		$('#' + $(this).attr('id').slice(0,-5) + '_section').attr('class', 'active');
 	});
 
 	$('#faq_section h3').on('click', function() {

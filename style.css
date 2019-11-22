@@ -106,6 +106,10 @@ main p {
 	cursor: pointer;
 }
 
+.tab.active {
+	color: black;
+}
+
 #diagram {
 	width: 100%;
 }
@@ -261,7 +265,7 @@ main p {
 	text-align: center;
 }
 
-.section {
+section {
 	display: none;
 	float: left;
 	position: relative;
@@ -270,13 +274,13 @@ main p {
 	padding-top: 0;
 }
 
-.section img {
+section img {
 	width: calc(100% + 8vw);
 	margin-left: -4vw;
 	margin-right: -4vw;
 }
 
-.section h2 {
+section h2 {
 	float: left;
 	position: relative;
 	width: calc(100% - 10vh);
@@ -476,12 +480,12 @@ main p {
 
 }
 
-.section.active {
+section.active {
 	display: block;
 }
 
-.tab.active {
-	color: black;
+section.inactive {
+	display: none;
 }
 
 #faq_section h3:hover {
