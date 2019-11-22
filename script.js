@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+	$(window).scroll(function () {
+		if(($(window).scrollTop()+$(window).height()) >= ($('footer').offset().top - $('#footer_links').height())) {
+			let through_footer = ($(window).scrollTop()+$(window).height()) - ($('footer').offset().top - $('#footer_links').height());
+			$('#config').css('top', -through_footer);
+		} else {
+			$('#config').css('top', 0);
+		}
+	});
+
 	$('.tab').on('click', function() {
 		if($(this).attr('id') == 'included_products_link') {
 			$('.tab').removeClass('active');
@@ -44,7 +54,7 @@ $(document).ready(function() {
 			readOnly: true
 		});
 		if(stars.eq(i).parent().attr('id') == 'average') {
-			stars.eq(i).rateYo("option", "starWidth", "16px");
+			stars.eq(i).rateYo('option', 'starWidth', '16px');
 		}
 	}
 
@@ -53,5 +63,5 @@ $(document).ready(function() {
 		let width = String(Number(bars.eq(i).text()) * 2.5)
 		bars.eq(i).css('width', width + 'px');
 		bars.eq(i).text('');
-	}	
+	}
 });
